@@ -3,13 +3,13 @@
 
 Notes, plans, blueprints for http://flon.io
 
-Started as https://github.com/jmettraux/flon transported here.
+Started as https://github.com/jmettraux/flon then transported here.
 
 ## flon
 
 * flon is meant to work as a pack of flon workers
 * there is no preferred language for the implementation of flon pieces
-* the focus is on protocal and interfaces
+* the focus is on protocols and interfaces
 
 * flon builds heavily on HTTP and JSON
 
