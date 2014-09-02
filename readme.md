@@ -5,7 +5,20 @@ Notes, plans, blueprints for http://flon.io
 
 Started as https://github.com/jmettraux/flon transported here.
 
+## flon
+
+* flon is meant to work as a pack of flon workers
+* there is no preferred language for the implementation of flon pieces
+* the focus is on protocal and interfaces
+
+* flon builds heavily on HTTP and JSON
+
+## documents
+
+* [glossary](glossary.md) - list of flon terms and their definitions
+* [testing](testing.md) - notes about testing flon, at various levels
+
 ## license
 
-See [LICENSE.txt](LICENSE.txt).
+This project is covered by the MIT license in [LICENSE.txt](LICENSE.txt).
 
