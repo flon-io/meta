@@ -17,3 +17,7 @@ respond, report, feed back, respond, signal, reflux
 
 respond, tell (back), tell, kill -9, signal
 
+the subject is the target (do execute, do receive)
+messages, orders: execute / receive
+messages, orders: execute / invoke / receive
+
