@@ -1,23 +1,50 @@
 
 # messages
 
-* apply
-  creates a new tree (root node)
+The messages are mostly "orders", "do execute", "do invoke", "do receive".
 
-* reply
-  responds to a tree node
+## execute
 
-An invocation (of a participant) is an "apply". Cancelling an invocation is a reply.
+```js
+{
+  exid: "xxx", // execution id
+  nid: "xxx", // node id
+  execute: [ "invoke", { "_0": "stamp" }, [] ],
+  payload: { color: "blue" }
+}
+```
 
-There is a distinction between applying a flow and applying an invocation.
+### launch
 
-execute / invoke / respond
+There is no `nid`. The `exid` is given upwards.
 
-respond, report, feed back, respond, signal, reflux
+```js
+{
+  exid: "xxx", // execution id
+  execute: [ "invoke", { "_0": "stamp" }, [] ],
+  payload: { color: "blue" }
+}
+```
 
-respond, tell (back), tell, kill -9, signal
+## invoke
 
-the subject is the target (do execute, do receive)
-messages, orders: execute / receive
-messages, orders: execute / invoke / receive
+```js
+{
+  exid: "xxx",
+  nid: "yyy",
+  invoke: [ "invoke", { "_0": "stamp" }, [] ],
+  payload: { color: "blue" }
+}
+```
+
+## receive
+
+```js
+{
+  exid: "xxx",
+  nid: "yyy",
+  receive: 1,
+  payload: { color: "red" }
+}
+```
 

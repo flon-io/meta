@@ -20,3 +20,11 @@ Calling a non-flon service/action.
 
 A piece of flon execution.
 
+### flon execution unit (feu)
+
+A pair listener + dispatcher and their executors and invokers.
+
+### flon execution group (feg)
+
+A group of flon execution units, known to each other.
+
