@@ -8,19 +8,31 @@
 ## exid
 
 ```ruby
-"{domain}_{yyyyMMdd}.{hhmm}.{NNNNN}"
+"{domain}-{yyyyMMdd}.{hhmm}.{NNNNN}"
 
 # for example:
-"acme.ch.main_20141015.0955.tekuneko"
+"acme.ch.main-20141015.0955.tekuneko"
 ```
 (Eventually prefix with flon execution unit id?)
 
 ## nid
 
 ```ruby
-"{exid}_{treeid}__{counter}"
+"{exid}-{treeid}-{counter}"
 
 # for example:
-"acme.ch.main_20141015.0955.tekuneko_0_1__f"
+"acme.ch.main-20141015.0955.tekuneko-0.1-f"
+```
+
+`counter` is in hexadecimal.
+
+## treeid
+
+Where to locate the node in the execution tree. Elements are separated by dots. Elements are in hexadecimal.
+
+```ruby
+#for example:
+"0"
+"0.1a"
 ```
 
