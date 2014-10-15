@@ -18,9 +18,9 @@
 ## nid
 
 ```ruby
-"{exid}_{treeid}_{count}"
+"{exid}_{treeid}__{counter}"
 
 # for example:
-"acme.ch.main_20141015.0955.tekuneko_0_1_f"
+"acme.ch.main_20141015.0955.tekuneko_0_1__f"
 ```
 
