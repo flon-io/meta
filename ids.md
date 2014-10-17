@@ -18,10 +18,10 @@
 ## nid
 
 ```ruby
-"{exid}-{treeid}-{counter}"
+"{treeid}-{counter}"
 
 # for example:
-"acme.ch.main-20141015.0955.tekuneko-0.1-f"
+"0.1-f"
 ```
 
 `counter` is in hexadecimal.
@@ -34,5 +34,16 @@ Where to locate the node in the execution tree. Elements are separated by dots. 
 #for example:
 "0"
 "0.1a"
+```
+
+## exnid
+
+Exid + nid.
+
+```ruby
+"{exid}-{nid}"
+
+# for example:
+"acme.ch.main-20141015.0955.tekuneko-0.1a-f"
 ```
 

@@ -14,18 +14,6 @@ The messages are mostly "orders", "do execute", "do invoke", "do receive".
 }
 ```
 
-### launch
-
-There is no `nid`. The `exid` is given upwards.
-
-```js
-{
-  exid: "xxx", // execution id
-  execute: [ "invoke", { "_0": "stamp" }, [] ],
-  payload: { color: "blue" }
-}
-```
-
 ## invoke
 
 ```js
