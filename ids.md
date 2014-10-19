@@ -5,17 +5,54 @@
 * exid: execution id
 * nid: node id
 
+## symbols
+
+```ruby
+/^[a-b0-9_]+$/
+```
+
+NB: no uppercases.
+
 ## domain
 
 A tree of names, read from left to right. Domains are used to allow/reject executions and invocations. For example a feu might be set to only allow "acme.ch.sales" prefixed executions/invocations.
 
+Symbol dot symbol.
+
+## feu
+
+Flon execution group id dot flon execution unit id.
+
+```ruby
+"{feg-id}.{feu-id}"
+
+# for example:
+"group.unit0"
+"g0.u0"
+"u0"
+```
+The feg-id should be optional.
+
+Symbol dot symbol.
+
+## tid
+
+Time id.
+
+```ruby
+"{yyyyMMdd}.{hhmm}.{NNNNN}"
+
+# for example:
+"20141015.0955.tekunekogo"
+```
+
 ## exid
 
 ```ruby
-"{domain}-{yyyyMMdd}.{hhmm}.{NNNNN}"
+"{domain}-{feu}-{tid}"
 
 # for example:
-"acme.ch.main-20141015.0955.tekuneko"
+"acme.ch.main-g0.u0-20141015.0955.tekunekogo"
 ```
 (Eventually prefix with flon execution unit id?)
 
@@ -50,7 +87,7 @@ Exid + nid.
 "{exid}-{nid}"
 
 # for example:
-"acme.ch.main-20141015.0955.tekuneko-0.1a-f"
-"acme.ch.main-20141015.0955.tekuneko-0.2"
+"acme.ch.main-g0.u0-20141015.0955.tekuneko-0.1a-f"
+"acme.ch.main-g0.u0-20141015.0955.tekuneko-0.2"
 ```
 
