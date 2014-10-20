@@ -5,6 +5,8 @@ The messages are mostly "orders", "do execute", "do invoke", "do receive".
 
 ## execute
 
+"execute" filenames are prefixed with "exe_".
+
 ```js
 {
   exid: "xxx", // execution id
@@ -16,6 +18,8 @@ The messages are mostly "orders", "do execute", "do invoke", "do receive".
 
 ## invoke
 
+"invoke" filenames are prefixed with "inv_".
+
 ```js
 {
   exid: "xxx",
@@ -26,6 +30,8 @@ The messages are mostly "orders", "do execute", "do invoke", "do receive".
 ```
 
 ## receive
+
+"receive" filenames are prefixed with "rcv_". Except when they come from invocations, in which case they are prefixed with "ret_" (return).
 
 ```js
 {
