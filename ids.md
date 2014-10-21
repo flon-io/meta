@@ -62,7 +62,7 @@ Time id.
 "{treeid}-{counter}"
 
 # for example:
-"0.1-f"
+"0_1-f"
 ```
 
 `counter` is in hexadecimal.
@@ -71,12 +71,13 @@ Eventually: make a trailing `-0` optional.
 
 ## treeid
 
-Where to locate the node in the execution tree. Elements are separated by dots. Elements are in hexadecimal.
+Where to locate the node in the execution tree. Elements are separated by underscores. Elements are in hexadecimal.
 
 ```ruby
 #for example:
 "0"
-"0.1a"
+"0_1a"
+"0_1a_4"
 ```
 
 ## exnid (or enid)
@@ -87,7 +88,7 @@ Exid + nid.
 "{exid}-{nid}"
 
 # for example:
-"acme.ch.main-g0.u0-20141015.0955.tekuneko-0.1a-f"
-"acme.ch.main-g0.u0-20141015.0955.tekuneko-0.2"
+"acme.ch.main-g0.u0-20141015.0955.tekuneko-0_1a-f"
+"acme.ch.main-g0.u0-20141015.0955.tekuneko-0_2"
 ```
 
