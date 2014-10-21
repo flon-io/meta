@@ -8,7 +8,7 @@
 ## symbols
 
 ```ruby
-/^[a-b0-9_]+$/
+/^[a-z0-9_]+$/
 ```
 
 NB: no uppercases.
