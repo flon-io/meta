@@ -17,6 +17,9 @@ Started as https://github.com/jmettraux/flon then transported here.
 
 * [glossary](glossary.md) - list of flon terms and their definitions
 * [testing](testing.md) - notes about testing flon, at various levels
+* [instructions](instructions.md) - flon "instructions" (sequence, if, ...)
+* [ids](ids.md) - identifiers and their hierarchy
+* [messages](messages.md) - the messages in and around flon
 
 ## license
 
