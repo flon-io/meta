@@ -29,7 +29,13 @@
   t: "invoke",
   c: "20141103.072803.123", // created
   m: "20141103.072804.654",  // modified
+  p: null // no parent
   // ...
 }
 ```
+
+#### `p` (parent)
+
+When pointing to `null`, it means the node is a root.
+Else p contains the nid of its parent.
 
