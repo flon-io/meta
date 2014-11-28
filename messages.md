@@ -3,15 +3,20 @@
 
 The messages are mostly "orders", "do execute", "do invoke", "do receive".
 
+There are messages whose point is to convey an event. "failed", "launched", "terminated".
+
+Event messages are logged in the msgs.log. Event messages are transmitted to subscribers as well.
+
 ## execute
 
 "execute" filenames are prefixed with "exe_".
 
 ```js
 {
+  point: "execute",
   exid: "xxx", // execution id
   nid: "xxx", // node id
-  execute: [ "invoke", { "_0": "stamp" }, [] ],
+  tree: [ "invoke", { "_0": "stamp" }, [] ],
   payload: { color: "blue" }
 }
 ```
@@ -22,23 +27,66 @@ The messages are mostly "orders", "do execute", "do invoke", "do receive".
 
 ```js
 {
+  point: "invoke",
   exid: "xxx",
   nid: "yyy",
-  invoke: [ "invoke", { "_0": "stamp" }, [] ],
+  tree: [ "invoke", { "_0": "stamp" }, [] ],
   payload: { color: "blue" }
+}
+```
+
+## return
+
+Return files are written by invokers implementations. They contain the raw payload of the invoker's reply. The dispatcher turns that ret_ file into a regular receive "rcv_" file.
+
+The dispatcher determines the nid (and exid) of the return by its filename.
+
+```js
+{
+  // ... payload ...
 }
 ```
 
 ## receive
 
-"receive" filenames are prefixed with "rcv_". Except when they come from invocations, in which case they are prefixed with "ret_" (return).
+"receive" filenames are prefixed with "rcv_".
 
 ```js
 {
+  point: "receive",
   exid: "xxx",
   nid: "yyy",
-  receive: 1,
   payload: { color: "red" }
 }
 ```
+
+## schedule
+
+"schedule" filenames are prefixed with "sch_".
+
+```js
+{
+  point: "schedule",
+  at: "20141128.103239", // seconds (not below)
+  //cron: "* * * * *", // minutes (not seconds)
+  exid: "xxx",
+  nid: "yyy", // identify scheduler
+  msg: { point: "receive", exid: "aaa", nid: "bbb", ... }
+    // identify scheduled
+}
+```
+
+## launched
+
+"evt_"
+
+TODO
+
+## terminated
+
+TODO
+
+## failed
+
+TODO
 
