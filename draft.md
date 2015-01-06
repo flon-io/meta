@@ -82,6 +82,28 @@ add_branch, add_branches (I dislike the names)
 on_cancel, on_return (finally), on_timeout
 as attribute and as instruction...
 
+```
+define sub0
+  x
+  y
+
+sequence timeout 5h, ontimeout sub0
+  a
+  b
+
+sequence timeout 5h
+  ontimeout sub0
+  a
+  b
+
+sequence timeout 5h
+  ontimeout # sequence
+    x
+    y
+  a
+  b
+```
+
 ## forget vs lose vs flank
 
 * forget: replies to parent expression immediately, is not cancellable (not reachable).
