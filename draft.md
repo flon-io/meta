@@ -1,4 +1,6 @@
 
+# draft about instructions
+
 * instruction names are nouns, "concurrence", "sequence", "iterator"
 * "cursor" is merged into "sequence"
 
@@ -25,7 +27,8 @@ sequence blue
   y
 ```
 
-* "break" and "rewind" and "cancel" and "return"
+## "break" and "rewind" and "cancel" and "return"
+
 they return to the expression
 they accept a "tag", except return
 "return" stops at subexecution root
@@ -41,7 +44,7 @@ citerator [ 1, 2, 3 ]
   a $(e)
 ```
 
-* if
+## if
 
 ```
 sequence if x > y
@@ -70,6 +73,7 @@ if x > y
   else # alias to sequence
     c
     d
+# this is easier to implement ...
 ```
 
 await, listen...
@@ -77,4 +81,14 @@ add_branch, add_branches (I dislike the names)
 
 on_cancel, on_return (finally), on_timeout
 as attribute and as instruction...
+
+## forget vs lose vs flank
+
+* forget: replies to parent expression immediately, is not cancellable (not reachable).
+* lose: never replies to the parent expression, is cancellable.
+* flank: immediately replies to the parent expression, is cancellable.
+
+Should we thus have, for each 'parent' expression a set of lists "children", "flankers", "losers"?
+
+Is "lost" identical to "flanking"?
 
