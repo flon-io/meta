@@ -87,6 +87,37 @@ if x > y
 # this is easier to implement ...
 ```
 
+```
+if x > y and z < u
+  a
+
+if sub0
+  a
+
+if sub0 and x > 3
+  a
+
+if sub0 > 3
+  a
+
+if
+  and
+    sub0
+    $(ret) > 3
+  a
+```
+
+"and" executes until false (returns false) else returns true
+"or" excutes until true (return true) else returns false
+"sequence" executes all in sequence
+"cand" executes all concurrently and returns true if all returned true
+"cor" executes all concurrently and returns true if at least one returned true
+
+That begs for a $(ret) field. How did ruote do that?
+ruote had a __result__ field.
+
+## more instructions
+
 await, listen...
 add_branch, add_branches (I dislike the names)
 
