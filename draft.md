@@ -31,7 +31,14 @@ sequence blue
 
 they return to the expression
 they accept a "tag", except return
+
 "return" stops at subexecution root
+that could be where the counter changes?
+
+_counter is a the root of the execution, each time there is an iteration, subexecution, ... the counter is incremented... Why not? Expressions would use a next_count(node) method.
+What if an expression is orphan, should it start a new counter at zero?
+Ruote generated ids on the fly...
+Should the executed thing keep its own counter? ```sub0: { tree: [ ... ], counter: 0 }```
 
 does "return" set a $(ret) value?
 
