@@ -187,3 +187,29 @@ sequence
   b
 ```
 
+becomes
+
+| exp    | child ? | cancellable |
+|--------|---------|-------------|
+| forget | no      | no          |
+| lose   | yes     | yes         |
+| flank  | no      | yes         |
+| ???    | yes     | no          |
+
+```
+sequence
+  sequence child: no cancellable: no
+    a
+  b
+```
+
+By default, goes into the "children" array...
+
+"children", "flanking"
+"children", "estranged", "disowned"
+"children" vs "bastards"
+
+* "children", you wait for them, you cancel them
+* "bastards", you cancel them
+* what are they when you don't cancel them? forgotten, they don't get listed
+
