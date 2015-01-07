@@ -156,3 +156,34 @@ Should we thus have, for each 'parent' expression a set of lists "children", "fl
 
 Is "lost" identical to "flanking"?
 
+```
+sequence
+  flanking
+    a
+  b
+
+sequence
+  forget
+    a
+  b
+
+sequence
+  lose
+    a
+  b
+```
+
+| exp    | replies     | cancellable |
+|--------|-------------|-------------|
+| forget | immediately | no          |
+| lose   | never       | yes         |
+| flank  | immediately | yes         |
+| ???    | never       | no          |
+
+```
+sequence
+  sequence reply: immediately cancellable: no
+    a
+  b
+```
+
