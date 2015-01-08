@@ -46,10 +46,22 @@ call sub g1: a, g0: b
 Following "invoke"'s lead:
 
 ```
-define sub #g0 g1
+define sub
   trace a
 call sub g1: a, g0: b
 
-# => payload.args: { _0: sub, g1: a, g0: b }
+# => vars.args: { _0: sub, g1: a, g0: b }
 ```
+
+or directly
+
+```
+define sub
+  trace a
+call sub g1: a, g0: b
+
+# => vars: { _0: sub, g1: a, g0: b }
+```
+
+`vcall` vs `fcall` vs `call`?
 
