@@ -65,3 +65,8 @@ call sub g1: a, g0: b
 
 `vcall` vs `fcall` vs `call`?
 
+It should align on "invoke":
+
+* unmapped arguments go into `variables.args`
+* mapped arguments go to fields, unless prefixed with "v."
+
