@@ -43,3 +43,13 @@ call sub g1: a, g0: b
 #    payload.g0: a
 ```
 
+Following "invoke"'s lead:
+
+```
+define sub #g0 g1
+  trace a
+call sub g1: a, g0: b
+
+# => payload.args: { _0: sub, g1: a, g0: b }
+```
+
