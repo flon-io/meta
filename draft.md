@@ -116,6 +116,23 @@ if
 That begs for a $(ret) field. How did ruote do that?
 ruote had a __result__ field.
 
+## cond
+
+```
+#(cond ((> 3 3) 'greater)
+#      ((< 3 3) 'less)
+#      (else 'equal))
+cond
+  $(x) > 3
+  a
+  $(x) > 1
+  b
+  else
+  c
+```
+
+Well...
+
 ## more instructions
 
 await, listen...
