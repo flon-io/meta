@@ -21,7 +21,7 @@
 
 An instruction sets its return value as the field "ret".
 
-* + invoker may set it easily (like an instruction would do)
+* + tasker may set it easily (like an instruction would do)
 * + easily read
 * - it stays as the flow goes on
 
@@ -29,14 +29,14 @@ An instruction sets its return value as the field "ret".
 
 An instruction sets its as the "local" variable "ret".
 
-* + it's hidden from the invokers
+* + it's hidden from the taskers
 * + easily read
 
 ## ret as rcv.ret
 
 An instruction sets its return as the "ret" entry in the return (parent.receive()) message.
 
-* + it's hidden from the invokers
+* + it's hidden from the taskers
 * - there must be a function to read the "ret" (not just lookup_var() or lookup_field())
 
 ## notes

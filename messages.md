@@ -1,7 +1,7 @@
 
 # messages
 
-The messages are mostly "orders", "do execute", "do invoke", "do receive".
+The messages are mostly "orders", "do execute", "do task", "do receive".
 
 There are messages whose point is to convey an event. "failed", "launched", "terminated".
 
@@ -16,28 +16,28 @@ Event messages are logged in the msgs.log. Event messages are transmitted to sub
   point: "execute",
   exid: "xxx", // execution id
   nid: "xxx", // node id
-  tree: [ "invoke", { "_0": "stamp" }, [] ],
+  tree: [ "task", { "_0": "stamp" }, [] ],
   payload: { color: "blue" }
 }
 ```
 
-## invoke
+## task
 
-"invoke" filenames are prefixed with "inv_".
+"task" filenames are prefixed with "tsk_".
 
 ```js
 {
-  point: "invoke",
+  point: "task",
   exid: "xxx",
   nid: "yyy",
-  tree: [ "invoke", { "_0": "stamp" }, [] ],
+  tree: [ "task", { "_0": "stamp" }, [] ],
   payload: { color: "blue" }
 }
 ```
 
 ## return
 
-Return files are written by invokers implementations. They contain the raw payload of the invoker's reply. The dispatcher turns that ret_ file into a regular receive "rcv_" file.
+Return files are written by tasker implementations. They contain the raw payload of the tasker's reply. The dispatcher turns that ret_ file into a regular receive "rcv_" file.
 
 The dispatcher determines the nid (and exid) of the return by its filename.
 

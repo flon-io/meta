@@ -12,9 +12,9 @@ enumeration? (musical) score? composition?
 
 The carrying out of a definition.
 
-### invocation
+### tasking
 
-Calling a non-flon service/action.
+Handing a task (workitem) to a service/action/actor external to flon.
 
 ### node
 
@@ -22,7 +22,7 @@ A piece of flon execution.
 
 ### flon execution unit (feu)
 
-A pair listener + dispatcher and their executors and invokers.
+A pair listener + dispatcher and their executors and taskers.
 
 ### flon execution group (feg)
 
