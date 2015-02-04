@@ -15,7 +15,7 @@ NB: no uppercases.
 
 ## domain
 
-A tree of names, read from left to right. Domains are used to allow/reject executions and invocations. For example a feu might be set to only allow "acme.ch.sales" prefixed executions/invocations.
+A tree of names, read from left to right. Domains are used to allow/reject executions and taskings. For example a feu might be set to only allow "acme.ch.sales" prefixed executions / taskings.
 
 Symbol dot symbol.
 

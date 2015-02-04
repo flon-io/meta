@@ -12,9 +12,18 @@ enumeration? (musical) score? composition?
 
 The carrying out of a definition.
 
+### flon-tasker
+### flon-dispatcher
+### flon-executor
+### flon-listener
+
 ### tasking
 
 Handing a task (workitem) to a service/action/actor external to flon.
+
+### tasker
+
+A piece of code that receives a task (workitem) from flon-tasker (taskmaster) and carries it out himself, or hands it somewhere else and gives back the result once available.
 
 ### node
 
