@@ -32,6 +32,14 @@ Or even
 
 No need for a payload.
 
+## execution vs tasking
+
+Execution is "workflow", tasking is "resource allocation". Sometimes they are intertwined, some other times they are kept separate.
+
+As an idealist idiot looking for some elegant design, I'd love them to be kept separate, orthogonal. But there are many organizations out there and many ways of thinking. I can carve a tool right, it will somehow fit my hand, but there are other hands out there, that could possibly wield my tool to greater effect.
+
+Execution is carried out by the executor. Tasking is carried out by the task\[mast\]er.
+
 ## states and points
 
 ### states
@@ -52,10 +60,19 @@ No need for a payload.
 { point: failed, reason: xyz }
 ```
 
+the imperative points:
+
 * *completed*, the default, task has been completed
 * *failed*, tasker tried but failed somehow
 * *refused*, tasker has not touched the task, it refused it
 * *uncompleted*, tasker did some work, but could not complete, more work is expected
+
+the informative points:
+
+* started
+* suspended
+* allocated
+* offered
 
 Upon receiving an 'informative' point, the executor simply flags the `task` node with a `task_status`.
 
@@ -68,11 +85,18 @@ Upon receiving an 'informative' point, the executor simply flags the `task` node
 ```
 
 OR, should that go not in the `execution.nodes.0_0-1` but in some `tsk.0_0-1.log` file?
+Does the execution need to access that information? Do some of the execution logic require that information? Sometimes that logic goes into the execution, sometimes it goes into the tasking...
 
-* started, informative
-* suspended, informative
-* allocated, informative
-* offered, informative
+log file:
+* plus: no need to read the whole execution to get at the status
+* plus: previous assignments are there, event if the node is dead
+* zero: one log file per node?
+
+task status array in node:
+* plus: easily accessible from the executor
+* minus: gone when the node is gone
+
+All these worries for task history... Is task history confined to its execution?
 
 ## taskee, misc
 
