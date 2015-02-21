@@ -26,9 +26,53 @@ Or even
 
 ```
 { point: refused, reason: xyz }
+  # or
+{ point: refused, reason: { msg: xyz } }
 ```
 
 No need for a payload.
+
+## states and points
+
+### states
+
+* created
+* offered (to 1 res, to many res)
+* allocated (to a single resource)
+* started
+* suspended
+* failed
+* completed
+
+### points
+
+```
+{ point: failed, error: { msg: xyz } }
+  # or
+{ point: failed, reason: xyz }
+```
+
+* *completed*, the default, task has been completed
+* *failed*, tasker tried but failed somehow
+* *refused*, tasker has not touched the task, it refused it
+* *uncompleted*, tasker did some work, but could not complete, more work is expected
+
+Upon receiving an 'informative' point, the executor simply flags the `task` node with a `task_status`.
+
+```
+  task_status:
+  [
+    { tasker: zozo, taskee: toto, point: started, ctime: 1234 },
+    { tasker: zozo, taskee: toto, point: suspended, ... }
+  ]
+```
+
+OR, should that go not in the `execution.nodes.0_0-1` but in some `tsk.0_0-1.log` file?
+
+* started, informative
+* suspended, informative
+* allocated, informative
+* offered, informative
 
 ## taskee, misc
 
@@ -36,7 +80,7 @@ Could it be something like `task.taskee` or `task._taskee_`?
 Does the task comprises headers? Should the taskee go into those headers?
 The tasker only sees the payload.
 
-Should we have a `flon.json` option that says "dump the whole task, not just the payload" ?
+Should we have a `flon.json` option that says "dump the whole task, not just the payload"?
 
 The task\[master\].rad has access to the whole task. It should have access to some "headers"...
 
