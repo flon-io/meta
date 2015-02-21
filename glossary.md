@@ -25,6 +25,10 @@ Handing a task (workitem) to a service/action/actor external to flon.
 
 A piece of code that receives a task (workitem) from flon-tasker (taskmaster) and carries it out himself, or hands it somewhere else and gives back the result once available.
 
+### taskmaster
+
+the flon-tasker binary. Receives task from the dispatcher, looks up taskers, forks them hand them the tasks.
+
 ### node
 
 A piece of flon execution.

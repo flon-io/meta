@@ -7,8 +7,8 @@
 * concurrence
 * if
 * call
-* for
-* cfor
+* map
+* cmap ?
 
 ## vars / fields manipulation
 
@@ -24,11 +24,11 @@
 
 ## events
 
-* await
+* await ?
 
 ## misc
 
-* cancel
+* cancel ?
 
 ## attributes
 
@@ -37,7 +37,7 @@
 * on_cancel
 * on_timeout, on_to
 
-* tag?
+* tag ?
 
 http://ruote.io/common_attributes.html
 
