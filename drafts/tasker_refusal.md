@@ -74,6 +74,20 @@ the informative points:
 * allocated
 * offered
 
+other points:
+
+* offer, the tasker/taskmaster wants the task to be offered to another tasker (but this point could be implicit, if there is a "taskee" then the offer is here)
+
+```
+{ point: uncompleted, reason: xyz, taskee: toto, payload: {...} }
+  # the task is incomplete, toto should go on with it
+
+{ point: refused, reason: xyz, taskee: toto }
+  # the task was refused, toto should be tasked
+```
+
+...
+
 Upon receiving an 'informative' point, the executor simply flags the `task` node with a `task_status`.
 
 ```
