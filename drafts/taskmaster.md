@@ -36,7 +36,11 @@ Tasker.rad indicates a tasker implemented in .rad. No need to fork, it is execut
 
 Could the tasker.rad and taskmaster.rad handling mechanisms be shared?
 
+And if the mecha were the same? It's somehow duplicating a bit of the dispatching mecha? Well, the dispatcher simply forks a flon-tasker, nothing more... Well, it may fork flon-executor as well...
+
 ## misc
 
 How does the taskermaster.rad lookup fall through the domain tree?
+
+The impl steps could be a) tasker.rad b) taskmaster.rad
 
