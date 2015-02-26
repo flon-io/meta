@@ -27,7 +27,15 @@ A piece of code that receives a task (workitem) from flon-tasker (taskmaster) an
 
 ### taskmaster
 
-the flon-tasker binary. Receives task from the dispatcher, looks up taskers, forks them hand them the tasks.
+The flon-tasker binary. Receives task from the dispatcher, looks up taskers, forks them hand them the tasks.
+
+### taskbox
+
+A "worklist" of tasks offered/allocated/started/suspended for "users".
+
+### tasklog
+
+For a given execution, the list of msgs related to tasks. Mostly a filtered version of the msgs.log of the execution.
 
 ### node
 
