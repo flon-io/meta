@@ -34,8 +34,7 @@ cat > t.flon
 org.example
 # tree
 sequence
-  trace 'hello $(name)'
-  trace 'hello again, $(name)'
+  task hello
 # payload
 name: Kenneth
 <CTRL-D>
