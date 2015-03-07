@@ -46,6 +46,8 @@ This is a very simple tasker, it does a simple trick with the task and replies i
 
 This tasker is placed under the domain "any", which means that executions from any domain may use it. To restrict its use to the "org.example" domain (and its subdomains), you would have to place it under a directory named "org.example" at the same level as "any".
 
+"Tasker" is ambiguous, on purpose. The tasker could perform the task by itself or task something else to do it. Some taskers are thus more like "taskmasters".
+
 In a first console:
 ```
 cd flon0
