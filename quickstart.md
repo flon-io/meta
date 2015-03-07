@@ -22,17 +22,18 @@ git clone https://github.com/flon-io/flon
 cd flon
 
 make provision T=flon0
+  # that creates a flon instance under flon0/
+```
 
-#
-# in a first console
-
+In a first console:
+```
 cd flon0
 
 ./bin/flon-dispatcher
+```
 
-#
-# in a second console
-
+In a second console:
+```
 cd flon0
 
 # launch an execution
