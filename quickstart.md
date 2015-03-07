@@ -9,6 +9,14 @@
 
 ## method
 
+steps here:
+
+* clone flon
+* provision an instance of flon (tree of binaries and data)
+* run the dispatcher (the heart of the flon engine)
+* launch an execution
+* inspect that execution, now hopefully completed
+
 ```
 git clone https://github.com/flon-io/flon
 cd flon
