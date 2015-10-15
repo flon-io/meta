@@ -1,7 +1,7 @@
 
 # tasker
 
-A tasker is a piece of code that receives a task as JSON through its STDIN. It them emits it back, potentially updated, via its STDOUT.
+A tasker is a piece of code that receives a task as JSON through its STDIN. It then emits it back, potentially updated, via its STDOUT.
 
 A tasker resides in a directory with its name under `usr/local/tsk/{domain}`.
 
