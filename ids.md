@@ -71,7 +71,7 @@ Eventually: make a trailing `-0` optional.
 
 ## treeid
 
-Where to locate the node in the execution tree. Elements are separated by underscores. Elements are in hexadecimal.
+Where to locate the node in the execution tree. Elements are separated by underscores. Elements are hexadecimal integers.
 
 ```ruby
 #for example:
