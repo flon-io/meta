@@ -21,6 +21,18 @@ Event messages are logged in the msgs.log. Event messages are transmitted to sub
 }
 ```
 
+"vars" may be set, making the node a "scope":
+```js
+{
+  point: "execute",
+  exid: "xxx", // execution id
+  nid: "xxx", // node id
+  tree: [ "task", { "_0": "stamp" }, [] ],
+  payload: { color: "blue" },
+  vars: { x: "hello", y: "world" }
+}
+```
+
 ## task
 
 "task" filenames are prefixed with "tsk_".
