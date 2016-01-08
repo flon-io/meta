@@ -26,15 +26,16 @@
 ```js
 {
   nid: "0_0",
-  t: "invoke",
-  c: "20141103.072803.123", // created
-  m: "20141103.072804.654",  // modified
-  p: null // no parent
+  tree: [ "trace", { "_0": "xyz" }, 1, [] ],
+  ctime: "20141103.072803.123", // created
+  mtime: "20141103.072804.654",  // modified
+  parent: null, // no parent
+  vars: null, // if set then node has own scope
   // ...
 }
 ```
 
-#### `p` (parent)
+#### `parent`
 
 When pointing to `null`, it means the node is a root.
 Else p contains the nid of its parent.
