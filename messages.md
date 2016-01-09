@@ -68,6 +68,7 @@ The dispatcher determines the nid (and exid) of the return by its filename.
   point: "receive",
   exid: "xxx",
   nid: "yyy",
+  from: "zzz",
   payload: { color: "red" }
 }
 ```
