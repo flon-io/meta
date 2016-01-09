@@ -27,6 +27,7 @@
 {
   nid: "0_0",
   tree: [ "trace", { "_0": "xyz" }, 1, [] ],
+  inst: "trace",
   ctime: "20141103.072803.123", // created
   mtime: "20141103.072804.654",  // modified
   parent: null, // no parent
