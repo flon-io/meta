@@ -89,6 +89,15 @@ The dispatcher determines the nid (and exid) of the return by its filename.
 }
 ```
 
+```js
+{
+  point: "unschedule",
+  at: "20141128.105313",
+  exid: "xxx",
+  nid: "0_2"
+}
+```
+
 ## launched
 
 "evt_"
